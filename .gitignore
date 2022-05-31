@@ -78,3 +78,6 @@ jspm_packages/
 
 # Vite output
 dist
+
+# Mac OS folder metadata
+.DS_Store
