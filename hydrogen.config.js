@@ -1,8 +1,4 @@
-import {defineConfig} from '@shopify/hydrogen/config';
-import {
-  CookieSessionStorage,
-  PerformanceMetricsServerAnalyticsConnector,
-} from '@shopify/hydrogen';
+import {defineConfig, CookieSessionStorage} from '@shopify/hydrogen/config';
 
 export default defineConfig({
   routes: import.meta.globEager('./src/routes/**/*.server.[jt](s|sx)'),
@@ -18,6 +14,5 @@ export default defineConfig({
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'strict',
     maxAge: 60 * 60 * 24 * 30,
-  }),
-  serverAnalyticsConnectors: [PerformanceMetricsServerAnalyticsConnector],
+  })
 });
